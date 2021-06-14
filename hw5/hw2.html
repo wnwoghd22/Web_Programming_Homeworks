@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var arr = new Array();
+            for(i = 2; i <= 9; ++i) {
+                var temp = [];
+                for(j = 1; j <= 9; ++j) {
+                    temp.push(i * j);
+                }
+                arr.push(temp);
+            }
+
+            document.write(`
+                <table border='1'>
+                    <thead>
+                        <tr>
+            `);
+            for(i = 2; i <= 9; ++i) {
+                document.write("<th>" + i + "단</th>");
+            }
+            document.write(`
+                        </tr>
+                    </thead>
+                    <tbody>
+            `);
+            for(i = 0; i < 9; ++i) {
+                document.write("<tr>");
+                for(j = 0; j < arr.length; ++j) {
+                    document.write("<td>" + (j + 2) + "*" + (i + 1) + "=" + arr[j][i] + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write(`
+                    </tbody>
+                </table>
+            `);
+            
+            function change() {
+                for(i = 0; i < arr.length; ++i) {
+                    for(j = 0; j < arr[i].length; ++j) {
+                        document.write(arr[i][j] + ' ');
+                    }
+                    document.write("<br>");
+                }
+                document.write(`
+                    <a href='hw2.html'>돌아가기</a>
+                `)
+            }
+        </script>
+        <button onclick="change()">배열 데이터 보기</button>
+    </body>
+</html>

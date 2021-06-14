@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes __rotate1 {
+                0% {transform: rotate(0deg);}
+                100% {transform: rotate(360deg);}
+            }
+            @keyframes __rotate2 {
+                0% {transform: rotate(0deg);}
+                25% {transform: rotate(-90deg);}
+                50% {transform: rotate(0deg);}
+                75% {transform: rotate(90deg);}
+                100% {transform: rotate(0deg);}
+                
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            img.img1 {animation-name: __rotate1;}
+            img.img2 {animation-name: __rotate2;}
+        </style>
+    </head>
+    <body>
+        <img class='img1' src='./spongebob.jpeg'>
+        <img class='img2' src='./spongebob.jpeg'>
+    </body>
+</html>

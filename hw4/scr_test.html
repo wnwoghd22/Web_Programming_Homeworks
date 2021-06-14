@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var num = 0;
+            document.write("태그 실행 순서" + num + "<br>");
+        </script> 
+        <script>
+            var num = 1;
+            document.write("태그 실행 순서" + num + "<br>");
+        </script>
+    </head>
+    <body>
+        <script>
+            var num = 2;
+            document.write("태그 실행 순서" + num + "<br>");
+        </script>
+        <script>
+            var num = 3;
+            document.write("태그 실행 순서" + num + "<br>");
+        </script>
+        <script>
+            var num = 4;
+            document.write(`태그 실행 순서 ${num}<br>`);
+        </script>
+    </body>
+</html>

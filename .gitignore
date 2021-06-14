@@ -1,0 +1,4 @@
+*.hwp
+*.pdf
+*.docx
+node_modules

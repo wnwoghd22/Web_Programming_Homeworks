@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method = "POST">
+            <fieldset>
+                <legend>영역1</legend>
+            </fieldset>
+            <fieldset>
+                <legend>영역2</legend>
+                <p>이름 : <input type="text" name="name" required></p>
+                <p>전공 : <input type="text" name="major" size="20" value="default"></p>
+                <p>비밀번호 : <input type="password" placeholder="password default" required></p>
+                <p></p>
+                <input type="submit" value="전송">
+                <input type="reset" value="초기화">
+                <textarea rows="5">텍스트</textarea>
+                <input type="radio" name="fuck" value="0">
+                <input type="radio" name="fuck" value="1">
+                <input type="radio" name="fuck" value="2">
+            </fieldset>
+
+            <button type="button" onclick="alert('클릭')">클릭</button>
+            <input type="button" onclick="alert('클릭')" value="클릭">
+            <!-- <button onclick="alert('클릭')"><image src="welcome.jpg"></button> -->
+            <select>
+                <optgroup label='asdfsadf'>
+                    <option>asdf</option>
+                    <option>asdasd</option>
+                    <optgroup label='zxcvzxcv'>
+                        <option>zxcv</option>
+                        <option>zxczxc</option>
+                </optgroup>
+            </select>
+            <input type="text" list="majorlist" name="majorls">
+            <datalist id="majorlist">
+                <option value='soft'>soft</option>
+                <option value='data'>data</option>
+            </datalist>
+            <br>
+            <input type="date">
+            <input type='color' value='#ff00ff'>
+            <input type="number" min="0" max="10">
+            <input type="range">
+            <br>
+            <input type="search">
+            <br>
+            <meter min="0" max="1" value="0.6">0.6</meter>
+            <progress value="20" max="100"></progress>
+            <input type="file">
+        </form>
+
+        <div>
+            <span>
+                <a href='intro.html' target='if_a'>인사</a>
+                <a href='introduce.html' target='if_a'>소개</a>
+            </span>
+        </div>
+        <iframe name='if_a' src='default.html'></iframe>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var idArr = ['id01', 'id02', 'id03'];
+            var pwArr = ['1234', '4321', '5678'];
+            while(true) {
+
+                input_id = prompt('id?:');
+            var index = -1;
+            for(i = 0; i < idArr.length; ++i) {
+                if(input_id === idArr[i]) {
+                    index = i; break;
+                }
+            }
+            if(index === -1) {
+                alert("존재하지 않는 아이디");
+                continue;
+            } else {
+                input_pw = prompt('pw?:');
+                var pw_index = -1;
+                for(j = 0; j < pwArr.length; ++j) {
+                    if(input_pw === pwArr[i]) {
+                        pw_index = j; break;
+                    }
+                }
+
+                if(index === pw_index) {
+                    document.write("인증 성공");
+                    break;
+                } else {
+                    alert("인증 실패");
+                    continue;
+                }
+            }
+            }
+        </script>
+    </body>
+</html>

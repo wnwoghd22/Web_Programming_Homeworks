@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='jquery-3.6.0.js'></script>
+        <style>
+            .blue {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>title</h1>
+        <button class='add'>add</button>
+        <button class='tog'>toggle</button>
+        <p>jquery</p>
+        <p id='p1'>jquery</p>
+
+        <h2 id='01'>hello world</h2>
+        <h2 id='02'>hello asdf</h2>
+
+        <p class='q1'>q1</p>
+        <ans class='q1'>ans1</ans>
+        <p class='q2'>p2</p>
+        <ans class='q2'>ans2</ans>
+
+        <div class='out'>
+            <p>mouse</p>
+            <p>mouse</p>
+        </div>
+        <script>
+            $('#p1').hide();
+
+            $(document).ready(function() { 
+                var myElement = $('#01');
+                myElement.text('hello zxcv');
+                $('ans').hide();
+                $('p.q1').click(() => {
+                    $('ans.q1').show();
+                });
+                $('ans.q1').click(() => {
+                    $(this).hide();
+                });
+                $('p.q2').click(() => {
+                    $('ans.q2').show();
+                });
+                $('ans.q2').click(() => {
+                    $(this).hide();
+                });
+
+                $('div.out').mouseenter(() => {
+                    $("p:first", this).text('pointer enter');
+                });
+
+                $('button.add').click(() => {
+                    $('h1').addClass('blue');
+                });
+                $('button.tog').click(() => {
+                    $('h1').toggleClass('blue');
+                });
+                var xWidth = 100; var yHeight = 100;
+                $('div').click(() => {
+                    $(this).width(xWidth).addClass('.box');
+                    xWidth -= 10;
+                })
+            });
+        </script>
+    </body>
+</html>

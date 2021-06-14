@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+                animation: boxmove 5s linear infinite alternate;
+            }
+            @keyframes boxmove {
+                from {
+                    left: 0px; top: 0px;
+                }
+                25% {
+                    background-color: yellow;
+                    left: 300px; top: 0px;
+                }
+                50% {
+                    background-color: green;
+                    left: 300px; top: 300px;
+                }
+                75% {
+                    background-color: blue;
+                    left: 0px; top: 300px;
+                }
+                to {
+                    left: 0px; top: 0px;
+                }
+            }
+            div:hover {
+                animation-play-state: paused;
+            }
+            @keyframes bounce {
+                from, to {
+                    bottom: 0px;
+                    animation-timing-function: ease-out;
+                }
+                50% {
+                    bottom: 200px;
+                    animation-timing-function: ease-in;
+                }
+            }
+            div.ball {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                animation-name: bounce;
+                animation-iteration-count: infinite;
+                animation-duration: 5s;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='box'>애니메이션</div>
+        
+        <div class='ball' style="color:white">공</div>
+    </body>
+</html>

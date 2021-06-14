@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./test.js"></script>
+        <script>
+            stdn = 'asdf';
+            var stdn;
+            var num;
+            var obj = null;
+            document.write(typeof 100 +'<br>');
+            document.write(typeof 10.5 +'<br>');
+            document.write(typeof 'asdf' +'<br>');
+            document.write(typeof [1,2] +'<br>');
+            document.write(typeof {name: 'asdf', age:24} +'<br>');
+            document.write(typeof obj +'<br>');
+            document.write(typeof num +'<br>');
+            
+            document.write(typeof stdn +'<br>' + stdn);
+
+            function getG() {
+                var kor = 95;
+                return kor;
+            }
+
+            getkor = getG();
+            document.write("nn");
+            document.write("국어" + getkor);
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="alert('외부 자바스크립트')">클릭</button>
+    </body>
+</html>

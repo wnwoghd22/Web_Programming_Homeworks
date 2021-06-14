@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var arr = [];
+            for(i = 0; i < 5; ++i) {
+                arr[i] = prompt('type integer: ');
+            }
+
+            document.write(arr);
+            document.write("<br>");
+            document.write(arr.sort(function(a, b) {
+                return a - b;
+            }));
+        </script>
+    </body>
+</html>

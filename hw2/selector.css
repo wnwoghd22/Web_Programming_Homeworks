@@ -1,0 +1,14 @@
+* {
+    background-color: lemonchiffon;
+}
+h3 {
+    text-align: right;
+    color: blue;
+}
+p {
+    color: violet;
+}
+span{
+    background-color: lightblue;
+    color: navy;
+}

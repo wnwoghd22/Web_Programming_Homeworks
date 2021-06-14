@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <style>
+            * { background-color: azure;}
+            p2 { color: blue; background-color: whitesmoke;}
+            p2 { color: lime; }
+            .class2 {
+               color: papayawhip; 
+            }
+            p2.class2 {
+                background-color: black;
+            }
+            p[text|="a1"] { color: yellow; }
+            p[text^="https"] { color: blue; }
+        </style>
+    </head>
+    <body>
+        <p1>외부 스타일</p1> <br>
+        <p2>내부 스타일</p2> <br>
+        <p2 style="color: red">인라인</p2>
+        <p2 class="class2">클래스</p2>
+        <p class="class2">임의 클래스</p>
+
+        <p text="a1-a2-a3">범위 텍스트</p>
+        <p text="a1df-a1">범위 텍스트</p>
+        <p text="a1-a1_a3">범위 텍스트</p>
+
+        <p text="https//">시작 테스트</p>
+        <p text=":https//">시작 테스트</p>
+    </body>
+</html>

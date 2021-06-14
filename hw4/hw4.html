@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes colorAnime {
+                0% {background-color: red;}
+                25% {background-color: yellow;}
+                50% {background-color: green;}
+                75% {background-color: blue;}
+                100% {background-color: red;}  
+            }
+            div {
+                height: 100px;
+                width: 100px;
+                animation-name: colorAnime;
+                animation-duration:4s;
+                animation-iteration-count: infinite;
+            }
+            div.d1 {border-top-left-radius:100px; animation-delay: 0s;}
+            div.d2 {border-top-right-radius:100px; animation-delay: 1s;}
+            div.d3 {border-bottom-left-radius:100px; animation-delay: 2s;}
+            div.d4 {border-bottom-right-radius:100px; animation-delay: 3s;}
+            table {border-collapse: collapse; border-width:0cm; border-style: none;}
+        </style>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr><td><div class='d1'></div></td><td><div class='d2'></div></td></tr>
+                <tr><td><div class='d3'></div></td><td><div class='d4'></div></td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>

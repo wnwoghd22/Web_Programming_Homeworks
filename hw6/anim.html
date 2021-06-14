@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='jquery-3.6.0.js'></script>
+        <style>
+            #panel {
+                padding: 70px;
+                background-color: yellow;
+            }
+            .moving {
+                border: 1px solid;
+                margin: 20px auto 0 auto;
+                text-align: right;
+                width: 550px;
+            }
+            .moving img {
+                cursor : pointer;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(document).ready(() => {
+                $('button.move').click(() => {
+                    $('img').animate({
+                        left: '300px',
+                        height: '300px',
+                        width: '350px'
+                    });
+                });
+                $('button.init').click(() => {
+                    $('img').animate({
+                        left: '0px',
+                        height: '100px',
+                        width: '130px'
+                    });
+                });
+                $('#out').click(() => {
+                    $('img').fadeOut('slow');
+                });
+                
+                $('#in').click(() => {
+                    $('img').fadeIn('slow');
+                });
+                
+                $('#toggle').click(() => {
+                    $('img').fadeToggle('slow');
+                });
+                $('#flip').click(() => {
+                    $('#panel').slideToggle('slow');
+                });
+            });
+
+            move = (obj, time) => {
+                $(obj).stop().animate({
+                    left: -350,
+                    top: 0,
+                }, time);
+            }
+        </script>
+        <button class='move'>확대</button>
+        <button class='init'>축소</button>
+        
+        <button id='in'>in</button>
+        <button id='out'>out</button>
+        <button id='toggle'>toggle</button>
+        <img src='iconfinder_user.png'></img>
+
+        <div id='flip'>flip</div>
+        <div id='panel'></div>
+
+        <div class='moving'>
+            <img onclick="move(this, 6000)" src='iconfinder_user.png'><br>
+            <img onclick="move(this, 3000)" src='iconfinder_user.png'><br>
+            <img onclick="move(this, 1000)" src='iconfinder_user.png'><br>
+        </div>
+    </body>
+</html>

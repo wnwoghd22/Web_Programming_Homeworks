@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <p id='v1'></p><p id='v2'></p><p id='v3'></p> -->
+        <!-- <p id='s1'></p><p id='s3'></p> -->
+        <!-- <p id='kim1'></p><p id='kim2'></p> -->
+        <!-- <p id='d4'></p><p id='d1'></p><p id='dig'></p> -->
+        
+        <a href="#" onclick="add()">이름?</a>
+        
+        <a href="#" onclick="add2()">이름</a>
+
+        <script>
+            function Car(name, color, speed) {
+                this.name = name;
+                this.color = color;
+                this.speed = speed;
+                this.speedUp = () => this.speed + 10;
+                this.speedDown = () => this.speed - 10;
+            }
+            var car = {
+                name: 'sonata',
+                speed: 100,
+                color: 'white',
+                start: function() {
+                    return this.speed + 10;
+                }
+            };
+            document.getElementById('v1').innerHTML = "이름 : " + car['name'];
+            document.getElementById('v2').innerHTML = "속도 : " + car.speed;
+            document.getElementById('v3').innerHTML = "색 : " + car.color;
+
+            var cname = document.getElementById("s1");
+            cname.textContent = car.name;
+            var cspeed = document.getElementById("s3");
+            cspeed.textContent = car.start();
+
+            var KimCar = new Car('jeep', 'red', 100);
+            KimCar.price = '3천';
+            delete KimCar.color;
+
+            document.getElementById('kim1').innerHTML = "색 : " + KimCar.color;
+            document.getElementById('kim2').innerHTML = "값 : " + KimCar.price;
+            
+            var carArr = [
+                { name: 'sss', color: 'blue', speed: 100 },
+                { name: 'jeep', color: 'red', speed: 70 },
+                { name: 'ppp', color: 'white', speed: 50 },
+            ];
+            for(i = 0; i < 3; ++i) {
+               // document.write(carArr[i].name + "<br>");
+            }
+            var carArr2 = [
+                [ 'sss', 'blue', 100 ],
+                [ 'jeep','red',70 ],
+                [ 'ppp', 'white',  50 ],
+            ];
+            for(i = 0; i < 3; ++i) {
+              //  document.write(carArr2[i] + "<br>");
+            }  
+
+            document.getElementById("d4").innerHTML
+             = new Date(2018, 11, 25, 18, 30, 29);
+             document.getElementById("d1").innerHTML
+             = new Date(1);
+
+            function digClock() {
+                var today = new Date();
+                var time = today.getSeconds() + '초';
+
+                document.getElementById("dig").innerHTML  = time;
+
+                setTimeout(digClock, 1000);
+            }
+            digClock();
+
+            function add() {
+                var header = document.createElement('h3');
+                var textNode = document.createTextNode('이름이름이름');
+
+                header.appendChild(textNode);
+                document.body.appendChild(header);
+            }
+            function add2() {
+                var header = document.createElement('h3');
+                var textNode = document.createTextNode('이름이름이름');
+                var header2 = document.createElement('h1');
+                var textNode2 = document.createTextNode('주재홍');
+
+                header.appendChild(textNode);
+                document.body.appendChild(header);
+                
+                header2.appendChild(textNode2);
+                document.body.appendChild(header2);
+            }
+        </script>
+    </body>
+</html>

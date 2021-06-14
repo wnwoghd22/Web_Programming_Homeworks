@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button type="button" onclick="printMsg('홍', 21)">정보</button>
+        <script>
+            function printMsg(name, age) {
+                document.write("name: <br>" + name + "</b><br>");
+                document.write("age: <br>" + age + "</b><br>");
+            }
+            var unan = function(a) {
+                document.write("익명함수" + a);
+            }
+            unan("b");
+            function unan(a) {
+                document.write("기본함수" + a);
+            }
+            unan("a");
+            function add(x, y, z) {
+                var _y = y === undefined ? 0 : y;
+                var _z = z === undefined ? 0 : z;
+
+                return x + _y + _z;
+            }
+            function arg_add() {
+                var i, sum = 0;
+                for(i = 0; i < arguments.length; ++i) {
+                    sum += arguments[i];
+                }
+
+                document.write("<br>" + sum + "<br>");
+            }
+            arg_add(100, 3, 4, 5, 7, 1);
+            document.write(add(2));
+            document.write(add(2, 3));
+            document.write(add(2, 3, 4));
+        </script>
+    </body>
+</html>

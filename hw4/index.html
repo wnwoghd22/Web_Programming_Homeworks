@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link {
+                opacity: 0.5;
+            }
+            a:hover {
+                opacity: 1.0;
+            }
+            img {
+                opacity: 0.2;
+            }
+            img:hover {
+                opacity: 1.0;
+            }
+            div.tip {
+                opacity: 0.2;
+            }
+            div.tip:hover {
+                opacity: 1.0;
+                color: red;
+            }
+            div.ans {
+                opacity: 0.0;
+            }
+            div.ans:hover {
+                opacity: 1.0;
+                color: blue;
+            }
+            ul.in li {
+                display: inline;
+                border: 1px solid;
+                border-color: blue;
+                margin: 3px;
+                padding: 5px;
+                background-color: yellow;
+            }
+            #grad1 {
+                height: 70px;
+                background: linear-gradient(270deg, red, yellow);
+            }
+            #grad2 {
+                height: 70px;
+                background: radial-gradient(circle, red, yellow);
+            }
+            div {
+                width: 200px;
+                height: 100px;
+                border: 1px dotted black;
+                background-color: yellow;
+                margin: 30px;
+                transition: width 3s, transform 3s;
+            }
+            div:hover {
+                width: 300px; 
+                transform: rotate(360deg);
+            }
+            div#box2 {
+                transform: translate(100px, 50px);
+            }
+            div#box1 {
+                transform: rotate(45deg);
+            }
+            div#box3 {
+                transform: scale(2, 0.5);
+            }
+            div#box4 {
+                transform: skew(20deg, 20deg)
+            }
+            .c1:hover {
+                transform-origin: 50% 50% 0px;
+                transform: translate(0px, 0px) rotate(-45deg) scale(0.7);
+            }
+            .transformed:hover {
+                backface-visibility: visible;
+                transform: perspective(500px) rotateY(50deg) rotateX(0deg);
+            }
+            .transformed2:hover {
+                backface-visibility: none;
+                transform: perspective(500px) rotateY(0deg) rotateX(45deg);
+            }
+            .transformed3:hover {
+                backface-visibility: none;
+                transform: perspective(500px) rotateY(170deg) rotateX(0deg);
+            }
+            .transformed4:hover {
+                backface-visibility: visible;
+                transform: perspective(100px) rotateY(170deg) rotateX(0deg);
+            }
+            #div1 {
+                transition-timing-function: linear;
+            }
+            #div2 {
+                transition-timing-function: ease;
+            }
+            #div3 {
+                transition-timing-function: ease-in;
+            }
+            #div4 {
+                transition-timing-function: ease-in-out;
+            }
+            #div5 {
+                transition-timing-function: ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <a href="http://www.google.com">구글</a>
+        </div>
+        <p></p>
+        <div>
+            <img src="card_front.png">
+        </div>
+        <div class="tip">힌트</div>
+        <div class="ans">정답</div>
+
+        <ul>
+            <li>asdfasdf</li>
+            <li>asdfasdf</li>
+            <li>asdfasdf</li>
+        </ul>
+
+        <ul class="in">
+            <li>asdfasdf</li>
+            <li>asdfasdf</li>
+            <li>asdfasdf</li>
+        </ul>
+
+        <div id="grad1"></div>
+        <div id="grad2"></div>
+        <div></div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+
+        <div class="c1"></div>
+
+        <div class="transformed"></div>
+        <div class="transformed2"></div>
+        <div class="transformed3"></div>
+        <div class="transformed4"></div>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+    </body>
+</html>

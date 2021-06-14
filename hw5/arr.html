@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+            var arr = [];
+            function insertArr() {
+                var i = 0;
+                for(i = 0; i <= 99; ++i) {
+                    arr[i] = i + 1;
+                }
+                selectArr();
+            }
+            function selectArr() {
+                var i;
+                for(i = 0; i < arr.length; ++i) {
+                    document.write(arr[i] + " ");
+                }
+                addArr();
+            }
+            function addArr() {
+                var i;
+                var sum = 0;
+                for(i = 0; i < arr.length; ++i) {
+                    sum += arr[i];
+                }
+                document.write(sum);
+                document.write("<a href=arr.html>back<a>");
+            }
+
+            var city = ['asdf', 'zxcv', 'qwer'];
+            var join1 = city.join();
+            var join2 = city.join('-');
+            var join3 = city.join(' and ');
+            var conc1 = city.concat('iuo', 'oiu');
+            var c2 = ['hjkl', 'bnm', 'po'];
+            var conc1 = city.concat('iuo', 'oiu');
+            var conc2 = city.concat(c2);
+
+            document.write(join1);
+            document.write(join2);
+            document.write(join3);
+            document.write(conc1);
+            document.write(conc2);
+
+            document.write("<br>");
+
+            var dat = [];
+            for (var _i = 0; _i < 10; ++_i) {
+                dat[_i] = _i + 1;
+            }
+
+            function printA(item, index) {
+                document.write(index + " : " + item);
+            }
+
+            dat.forEach(printA);
+            
+            document.write("<br>");
+            document.write(dat.indexOf(20));
+            document.write("<br>");
+
+            document.write(dat.join());
+            document.write("<br>");
+
+            document.write(dat.reverse().join());
+            document.write("<br>");
+            document.write(dat.join());
+
+            var str1 = dat.slice(0, 4);
+            var str2 = dat.slice(2, -1);
+            var str3 = dat.slice(-4, -2);
+            
+            document.write("<br>");
+            document.write(str1);
+            document.write("<br>");
+            document.write(str2);
+            document.write("<br>");
+            document.write(str3);
+
+            var sp1 = dat.splice(1, 2);
+            var sp2 = dat.splice(1, 1, '100');
+            var sp3 = dat.splice(2, Number.MAX_VALUE);
+            
+            document.write("<br>");
+            document.write(sp1);
+            document.write("<br>");
+            document.write(sp2);
+            document.write("<br>");
+            document.write(sp3);
+
+            var n1 = [19, 33, 67, 26, 55, 24, 53, 12, 31];
+            var n2 = [132, 2, 41, 123, 45, 1234, 6, 29, 4567];
+
+            document.write("<br>");
+            document.write(n1.sort() + "<br>");
+            
+            document.write(n2.sort() + "<br>");
+            
+            document.write(n2.sort( function(a, b) { return a - b }) + "<br>");
+
+        </script>
+        <button onclick="insertArr()">조회</button>
+    </body>
+</html>

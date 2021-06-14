@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <form>
+            <fieldset>
+                <legend><h1>개인 정보 입력</h1></legend>
+                <p>아이디: <input type="text"> <input type="button" value="ID 중복 검사"></p>
+                <p>생년월일: <input type="date"></p>
+                <p>성별:
+                    <input type="radio" name="gender" value="m"> 남성
+                    <input type="radio" name="gender" value="f"> 여성
+                </p>
+                <p>E-mail: <input type="email"></p>
+                <p>메일 수신:
+                    <input type="radio" name="mail" value="1">수신동의
+                    <input type="radio" name="mail" value="0">수신거부
+                </p>
+                <p>핸드폰:
+                    <select name="phone">
+                        <option value="010" selected>010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                    </select>-<input type="text">-<input type="text">
+                </p>
+                <p>직업:
+                    <select name="job">
+                        <option selected>학생</option>
+                        <option>군인</option>
+                    </select>
+                </p>
+                <p>취미:
+                    <input type="checkbox"> 쇼핑
+                    <input type="checkbox"> 인터넷
+                    <input type="checkbox"> 음악감상
+                    <input type="checkbox"> 독서
+                    <input type="checkbox"> 스포츠
+                    <input type="checkbox"> 기타
+                </p>
+                <p>자기소개:
+                    <textarea rows=5 cols=100></textarea>
+                </p>
+            </fieldset>
+            <input type="submit" value="등록">
+            <input type="reset" value="초기화">
+        </form>
+    </body>
+</html>

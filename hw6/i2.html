@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id='d1'>
+            <p id='p1'>p1</p>
+            <p id='p2'>p2</p>
+        </div>
+        <a href='#' onclick = "add()">add</a>
+
+        <p id='msg'>문서 객체 스타일</p>
+        <input type='button' onclick='textStyle()' value='style'>
+        <input type='button' onclick='textVisible(true)' value='visible'>
+        <input type='button' onclick='textVisible(false)' value='hidden'>
+
+        <script>
+            var para = document.createElement('p');
+            var node = document.createTextNode('new node');
+            para.appendChild(node);
+
+            var element = document.getElementById('d1');
+            var child = document.getElementById('p2');
+
+            //element.appendChild(para);
+            element.insertBefore(para, child);
+
+            function add() {
+                var img = document.createElement('img');
+
+                img.src = 'iconfinder_user.png';
+                img.width = 100; img.height = 122;
+
+                document.body.appendChild(img);
+            }
+            
+            var t_style = false;
+            function textStyle() {
+                t_style === false ?
+                ( document.getElementById('msg').style.color = 'blue', t_style = true ) :
+                ( document.getElementById('msg').style.color = 'black', t_style = false ) ;
+            }
+            function textVisible(f) {
+                f === true ? 
+                document.getElementById('msg').style.visibility = 'visible':
+                document.getElementById('msg').style.visibility = 'hidden';
+            }
+        </script>
+    </body>
+</html>
